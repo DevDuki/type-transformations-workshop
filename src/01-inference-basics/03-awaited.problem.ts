@@ -2,7 +2,7 @@ import { Equal, Expect } from "../helpers/type-utils";
 
 const getUser = () => {
   return Promise.resolve({
-    id: "123",
+    id: "123456",
     name: "John",
     email: "john@example.com",
   });
