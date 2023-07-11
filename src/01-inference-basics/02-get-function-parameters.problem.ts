@@ -11,7 +11,7 @@ const makeQuery = (
   },
 ) => {};
 
-type MakeQueryParameters = Parameters<typeof makeQuery>;
+type MakeQueryParameterst = Parameters<typeof makeQuery>;
 
 /**
  * Additional info:
@@ -19,15 +19,15 @@ type MakeQueryParameters = Parameters<typeof makeQuery>;
  * Now that we extracted the parameters as a tuple (since makeQuery accepts 2 parameters), you could also access only the second parameter
  * type by using indexes, such as:
  */
-type MakeQuerySecondParameter = MakeQueryParameters[1];
+type MakeQuerySecondParameter = MakeQueryParameterst[1];
 
-const parameters: MakeQueryParameters = ['testurl', { method: 'testMethod' }];
+const parameters: MakeQueryParameterst = ['testurl', { method: 'testMethod' }];
 const secondParameter: MakeQuerySecondParameter = { headers: { Location: 'some location' } };
 
 type tests = [
   Expect<
     Equal<
-      MakeQueryParameters,
+      MakeQueryParameterst,
       [
         url: string,
         opts?: {
